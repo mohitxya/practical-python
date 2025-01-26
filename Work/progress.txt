@@ -1,0 +1,11 @@
+Progress
+--------------------
+currently working on: 2.4 Sequences/2.7 
+
+3. Program Organization-6
+4. Classes and Objects-4
+5. The Inner Workings of Python Objects-2
+6. Generators-4
+7. A Few Advanced Topics-4
+8. Testing, Logging, and Debugging-3
+9. Packages-3
