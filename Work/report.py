@@ -38,4 +38,21 @@ def read_prices(filename):
             except IndexError as e:
                 continue
     return prices 
-            
+#These statements should take the list of stocks in Exercise 2.5 and the dictionary of prices in Exercise 2.6 and compute the current value of the portfolio along with the gain/loss.
+def make_report(portfolio,prices):
+    final=[]
+    pflio=portfolio
+    # portfolio is a list [{name:hfh,shares: kdj, price:kjd},{},{}...so on]
+
+    prce=prices
+    # prce is a dictionary with keys and values.
+    # we want a list of tuples.
+    for i in range(len(pflio)):
+        temp=pflio[i]['name']
+        tup=(pflio[i]['name'],pflio[i]['shares'],prce[temp],prce[temp]-pflio[i]['price'])
+        final.append(tup)
+    return final    
+
+    
+    
+    
