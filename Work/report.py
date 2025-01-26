@@ -51,7 +51,13 @@ def make_report(portfolio,prices):
         temp=pflio[i]['name']
         tup=(pflio[i]['name'],pflio[i]['shares'],prce[temp],prce[temp]-pflio[i]['price'])
         final.append(tup)
-    return final    
+    headers = ('Name', 'Shares', 'Price', 'Change')
+
+    print(f"{headers[0]:>10s} {headers[1]:>10s} {headers[2]:>10s} {headers[3]:>10s}")
+    separator = f"{'-'*10:>10s} {'-'*10:>10s} {'-'*10:>10s} {'-'*10:>10s}"
+    print(separator)
+    for name, shares, price, change in final:
+        print(f"{name:>10s} {shares:>10d} {f'${price:.2f}':>10s} {change:>10.2f}")
 
     
     
